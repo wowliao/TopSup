@@ -48,10 +48,8 @@
 ### Mac+IOS
 
 #### 1. 安装 WebDriverAgent
-参考
-  -  [iOS 真机如何安装 WebDriverAgent](https://testerhome.com/topics/7220) 
-  -  [Android 和 iOS 操作步骤](https://github.com/wangshub/wechat_jump_game/wiki/Android-%E5%92%8C-iOS-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4)
-  注：请注意iOS和Xcode版本。
+教程：https://github.com/wowliao/TopSup/wiki/WebDriveAgent%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B
+注：请注意iOS和Xcode版本。
 #### 2. 安装 python 3
 #### 3. 安装所需 python 包
 pip install pytesseract
@@ -69,7 +67,6 @@ https://github.com/tesseract-ocr/tesseract/wiki
 
 #### 6. 修改  `common/ocr.py` 代码相应目录信息
 ```
-
 # mac 环境 记得自己安装训练文件
 # tesseract 路径
 #pytesseract.pytesseract.tesseract_cmd = '/usr/local/Cellar/tesseract/3.05.01/bin/tesseract'
