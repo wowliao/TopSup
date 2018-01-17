@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# @Author  : Skye
-# @Time    : 2018/1/9 19:34
+# @Author  : wowliao
+# @Time    : 2018/1/16 23:39
 # @desc    :
 
 from PIL import Image
@@ -62,13 +62,7 @@ def ocr_img(image):
     choices_im = binarizing(choices_im, 190)
     #img=depoint(choices_im)
     #img.show()
-
-    # win环境
-    # tesseract 路径
-    # pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract'
-    # 语言包目录和参数
-    # tessdata_dir_config = '--tessdata-dir "C:\\Program Files (x86)\\Tesseract-OCR\\tessdata" --psm 6'
-
+ 
     # mac 环境 记得自己安装训练文件
     # tesseract 路径
     pytesseract.pytesseract.tesseract_cmd = '/usr/local/Cellar/tesseract/3.05.01/bin/tesseract'
