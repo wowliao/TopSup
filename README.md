@@ -1,5 +1,5 @@
 
-# 答题辅助
+# 答题辅助(Mac+iOS）
 可用APP：冲顶大会、芝士超人、西瓜视频。
 注：不同的APP需更改 common/ocr.py 中的分辨率。
 
@@ -51,6 +51,7 @@
 参考
   -  [iOS 真机如何安装 WebDriverAgent](https://testerhome.com/topics/7220) 
   -  [Android 和 iOS 操作步骤](https://github.com/wangshub/wechat_jump_game/wiki/Android-%E5%92%8C-iOS-%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4)
+  注：请注意iOS和Xcode版本。
 #### 2. 安装 python 3
 #### 3. 安装所需 python 包
 pip install pytesseract
@@ -78,6 +79,7 @@ https://github.com/tesseract-ocr/tesseract/wiki
 
 #### 7. 运行脚本
 `python GetQuestionTessIos.py`
+注：若Mac中有Python2和Python3：`python3 GetQuestionTessIos.py`
 会自动识别文字并打开浏览器
 
 **注： 可以用 `GetImgTool.py` 调整题目截取位置**
