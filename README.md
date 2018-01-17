@@ -1,35 +1,16 @@
 
 # 答题辅助
-这两天冲顶大会直播答题 APP 突然火了起来，萌生了使用截图，文字识别，搜索来做个小辅助的想法。使用文字识别搜索，只能增加准确率，保证不了全对。
-
+可用APP：冲顶大会、芝士超人、西瓜视频。
+注：不同的APP需更改 common/ocr.py 中的分辨率。
 
 
 **非常感谢关注，欢迎大家PR新的想法和优化。**
 
 ![](/resources/screenshot.png)
 
-灵感来自：
-> [微信跳一跳辅助 ](https://github.com/wangshub/wechat_jump_game)
->
-> [程序员如何玩转《冲顶大会》？](https://livc.io/blog/204)
-
-
-## 更新日志
-- 2018.01.12
-  - 修复 windows 命令行颜色乱码，处理一些识别错误
-- 2018.01.11
-  - 修复搜索可能的乱码等一些问题，多线程加快执行
-- 2018.01.10
-  - 增加循环，无需重复加载，优化逻辑和显示 来自 [issue #7](https://github.com/Skyexu/TopSup/issues/7)。增加部分手机截图设置
-  - 增加了截图传输效率，修改了识别参数，对图像进行灰度转化，去干扰，增加了识别准确率。结果判断使用了三种方式，对不同问题可以参考不同结果。
-
 
 ## 版本说明
 - 谷歌 Tesseract
-  - [简单访问浏览器版本](/simpleVersion)
-  - 最新版本：本目录
-- [百度 OCR 版本](https://github.com/Skyexu/TopSup/tree/master/baiduApiVersion)：只实现了简单浏览器搜索，参考本目录代码可改
-
 
 
 ## 具体做法
@@ -100,12 +81,13 @@ https://github.com/tesseract-ocr/tesseract/wiki
 会自动识别文字并打开浏览器
 
 **注： 可以用 `GetImgTool.py` 调整题目截取位置**
-可以到[这里](/config/devicesCutConfig.txt)查看部分手机截图设置
+
 若屏幕分辨率不同，请在 `ocr.py` 中自行修改代码即可
 ```
-# 切割题目和选项位置，左上角坐标和右下角坐标,自行测试分辨率
-question_im = image.crop((50, 350, 1000, 560)) # 坚果 pro1
-choices_im = image.crop((75, 535, 990, 1150))
-# question = img.crop((75, 315, 1167, 789)) # iPhone 7P
-```
+ # 切割题目和选项位置，左上角坐标和右下角坐标,自行测试分辨率
+    #question_im = image.crop((45, 425, 1150, 780)) # iPhone 7P 冲顶大会
+    question_im = image.crop((45, 240, 1200, 600)) # iPhone 7P 芝士超人，西瓜视频
+    
+    #choices_im = image.crop((45, 790, 1167, 1450)) # iPhone 7P 冲顶大会
+    choices_im = image.crop((58, 580, 1216, 1280)) # iPhone 7P 芝士超人，西瓜视频
 
