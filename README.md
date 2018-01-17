@@ -49,7 +49,6 @@
 
 #### 1. 安装 WebDriverAgent
 教程：https://github.com/wowliao/TopSup/wiki/WebDriveAgent%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B
-注：请注意iOS和Xcode版本。
 #### 2. 安装 python 3
 #### 3. 安装所需 python 包
 pip install pytesseract
